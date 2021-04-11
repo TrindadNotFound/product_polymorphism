@@ -5,6 +5,7 @@ public class Product
 	private String name;
 	private Double price;
 	
+	
 	public Product()
 	{
 		
@@ -39,7 +40,7 @@ public class Product
 	
 	public String priceTag()
 	{
-		return name + price + " €";
+		return name + " " + price + " €";
 	}
 
 }

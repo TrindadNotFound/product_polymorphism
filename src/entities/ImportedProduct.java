@@ -25,8 +25,13 @@ public class ImportedProduct extends Product
 		this.customsFee = customsFee;
 	}
 	
+	public Double totalPrice()
+	{
+		return super.getPrice() + customsFee;
+	}
+	
 	public String priceTag()
 	{
-		return super.getName() + " " + super.getPrice() + " €" + " (Customs Fee: " + customsFee + " €)";
+		return super.getName() + " " + totalPrice() + " €" + " (Customs Fee: " + customsFee + " €)";
 	}
 }
